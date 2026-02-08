@@ -1,0 +1,53 @@
+{
+  "name": "Muhammad Izaz Haider | DevSecOps & AI Security Engineer",
+  "short_name": "IH Portfolio",
+  "description": "Cybersecurity innovator with 4+ years experience in DevSecOps, AI Security, and Cloud Architecture. 50+ certifications. Building AI-powered security solutions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0e27",
+  "theme_color": "#06b6d4",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "business",
+    "productivity",
+    "education",
+    "technology",
+    "cybersecurity",
+    "devsecops"
+  ],
+  "shortcuts": [
+    {
+      "name": "View Projects",
+      "short_name": "Projects",
+      "description": "View all cybersecurity projects",
+      "url": "/#projects",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "View Skills",
+      "short_name": "Skills",
+      "description": "Explore technical skills",
+      "url": "/#skills",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Get in touch",
+      "url": "/#contact",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    }
+  ],
+  "lang": "en-US",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false
+}
