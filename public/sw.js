@@ -1,5 +1,5 @@
 // Service Worker for caching static assets
-const CACHE_NAME = 'portfolio-v1';
+const CACHE_NAME = 'portfolio-v2-2026-02-08';
 const urlsToCache = [
   '/',
   '/index.html',

@@ -94,7 +94,8 @@ export default function Contact() {
             <div className="group">
               <label htmlFor="message" className="block text-sm font-mono text-[var(--color-accent)] mb-2 group-focus-within:text-[var(--color-accent-secondary)] transition-colors">Message</label>
               <textarea 
-                name="message" 
+                name="message"
+                id="message"
                 rows={5}
                 required
                 className="w-full bg-[var(--color-bg-primary)] border border-[var(--color-border-subtle)] rounded-lg p-4 text-[var(--color-text-heading)] focus:outline-none focus:border-[var(--color-accent)] transition-colors font-mono"

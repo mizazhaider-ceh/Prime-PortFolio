@@ -26,6 +26,15 @@ export function App() {
       setTimeout(() => splash.remove(), 300);
     }
 
+    // Unregister old service workers to prevent cache issues
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(registrations => {
+        registrations.forEach(registration => {
+          registration.unregister();
+        });
+      });
+    }
+
     // Check if desktop for Three.js
     const checkDesktop = window.innerWidth > 768;
     setIsDesktop(checkDesktop);
@@ -50,13 +59,6 @@ export function App() {
     };
     
     window.addEventListener('resize', handleResize);
-
-    // Register service worker for caching
-    if ('serviceWorker' in navigator && import.meta.env.PROD) {
-      navigator.serviceWorker.register('/sw.js').catch(() => {
-        // Silently fail if service worker registration fails
-      });
-    }
 
     return () => window.removeEventListener('resize', handleResize);
   }, []);
