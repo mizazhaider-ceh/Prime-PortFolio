@@ -1,4 +1,4 @@
-import { FaArrowUp, FaGithub, FaLinkedin, FaTwitter, FaHeart } from 'react-icons/fa';
+import { FaArrowUp, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const links = [
@@ -73,15 +73,6 @@ export default function Footer() {
 
           <div className="flex flex-col items-center md:items-end gap-2">
             <p className="font-mono">&copy; 2026 Muhammad Izaz Haider</p>
-            <span className="text-xs text-[var(--color-text-secondary)] opacity-70 font-mono flex items-center gap-1.5">
-              Built with React <motion.span
-                animate={{ scale: [1, 1.3, 1] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-                className="inline-block"
-              >
-                <FaHeart className="text-red-500 text-[10px]" />
-              </motion.span> Tailwind • Three.js
-            </span>
           </div>
 
         </div>
