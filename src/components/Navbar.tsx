@@ -108,14 +108,14 @@ export default function Navbar() {
               {/* Text Logo */}
               <div className="flex flex-col leading-none">
                 <motion.span 
-                  className="text-xl sm:text-2xl font-bold font-cyber text-[var(--color-accent)]"
+                  className="text-lg sm:text-xl md:text-2xl font-bold font-cyber text-[var(--color-accent)]"
                   whileHover={{ 
                     textShadow: '0 0 20px rgba(6, 182, 212, 0.8)'
                   }}
                 >
                   Muhammad Izaz Haider
                 </motion.span>
-                <span className="text-[10px] sm:text-xs font-mono text-[var(--color-accent-secondary)] opacity-70">
+                <span className="hidden sm:block text-[10px] sm:text-xs font-mono text-[var(--color-accent-secondary)] opacity-70">
                   Pentester | AI & Security Engineer | DevSecOps
                 </span>
               </div>
