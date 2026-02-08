@@ -113,10 +113,10 @@ export default function Navbar() {
                     textShadow: '0 0 20px rgba(6, 182, 212, 0.8)'
                   }}
                 >
-                  Izaz Haider
+                  Muhammad Izaz Haider
                 </motion.span>
                 <span className="text-[10px] sm:text-xs font-mono text-[var(--color-accent-secondary)] opacity-70">
-                  DevSecOps Engineer
+                  Pentester | AI & Security Engineer | DevSecOps
                 </span>
               </div>
             </motion.div>
