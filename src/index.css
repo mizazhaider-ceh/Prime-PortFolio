@@ -1,0 +1,52 @@
+﻿/* ══════════════════════════════════════════════════════════════════════════════
+   DEVSECOPS PORTFOLIO - MODULAR CSS ARCHITECTURE
+   Main stylesheet that imports all modular CSS files
+══════════════════════════════════════════════════════════════════════════════ */
+
+/* Fonts loaded via <link> in index.html for non-blocking render */
+
+/* Tailwind CSS Import - Must be before @theme */
+@import "tailwindcss";
+
+/* Tailwind Theme Tokens - Map to CSS variables for theme switching */
+@theme {
+  --color-primary: var(--color-bg-primary);
+  --color-secondary: var(--color-accent);
+  --color-accent: var(--color-accent-secondary);
+  --color-slate-light: var(--color-text-secondary);
+  --color-slate-lighter: var(--color-text-primary);
+  --color-navy: var(--color-bg-primary);
+  --color-light-navy: var(--color-bg-secondary);
+  --color-lightest-navy: var(--color-bg-tertiary);
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-cyber: 'Orbitron', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+  --font-outfit: 'Outfit', sans-serif;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   MODULAR CSS IMPORTS - Import order is critical for CSS specificity
+══════════════════════════════════════════════════════════════════════════════ */
+
+/* 1. Base Styles - HTML elements, typography */
+@import './styles/base.css';
+
+/* 2. Themes - Dark and Light theme variables */
+@import './styles/themes/dark.css';
+@import './styles/themes/light.css';
+
+/* 3. Glass Effects - Glass morphism system */
+@import './styles/glass.css';
+
+/* 4. Components - All component-specific styles */
+@import './styles/components.css';
+
+/* 5. Animations - Keyframes, Matrix rain, scrollbar */
+@import './styles/animations.css';
+
+/* 6. Utilities - Helper classes, 3D transforms, accessibility */
+@import './styles/utilities.css';
+
+/* 7. Print Styles - Print media optimizations */
+@import './styles/print.css';
