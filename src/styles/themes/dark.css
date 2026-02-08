@@ -1,0 +1,73 @@
+/* ══════════════════════════════════════════════════════════════════════════════
+   PRIME DARK THEME - Enhanced Cyberpunk Aesthetic
+   Deep blacks with vibrant cyan/emerald accents and subtle purple undertones
+══════════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  color-scheme: dark;
+  
+  /* ── Background & Gradients - Deep Space ── */
+  --color-bg-primary: #050505;
+  --color-bg-secondary: rgba(12, 14, 18, 0.92);
+  --color-bg-tertiary: rgba(20, 24, 32, 0.95);
+  --color-bg-gradient: radial-gradient(
+    ellipse at 30% 50%, 
+    #0a1515 0%,
+    #050505 40%,
+    #0a0510 100%
+  );
+  
+  /* ── Text Colors - Enhanced Contrast ── */
+  --color-text-primary: #f0f4f8;
+  --color-text-secondary: #94a3b8;
+  --color-text-heading: #ffffff;
+  --color-text-muted: #64748b;
+  
+  /* ── Accent Colors - Vibrant Cyan & Purple ── */
+  --color-accent: #06b6d4;
+  --color-accent-secondary: #a78bfa;
+  --color-accent-hover: #0891b2;
+  --color-accent-dim: rgba(6, 182, 212, 0.1);
+  --color-accent-bright: #22d3ee;
+  
+  /* ── Borders - Subtle Glow ── */
+  --color-border: rgba(6, 182, 212, 0.2);
+  --color-border-subtle: rgba(255, 255, 255, 0.05);
+  --color-border-bright: rgba(6, 182, 212, 0.4);
+  
+  /* ── Glass Effects - Enhanced Frosted ── */
+  --glass-bg: rgba(12, 14, 18, 0.8);
+  --glass-bg-dark: rgba(5, 5, 5, 0.6);
+  --glass-border: 1px solid rgba(6, 182, 212, 0.15);
+  --glass-blur: blur(16px);
+  
+  /* ── Glow Effects - Cyberpunk Style ── */
+  --shadow-glow: 
+    0 0 15px rgba(6, 182, 212, 0.2),
+    0 0 40px rgba(6, 182, 212, 0.08),
+    0 8px 32px rgba(0, 0, 0, 0.4);
+  --shadow-glow-strong: 
+    0 0 25px rgba(6, 182, 212, 0.4),
+    0 0 60px rgba(6, 182, 212, 0.15),
+    0 12px 48px rgba(0, 0, 0, 0.6);
+  --shadow-card: 
+    0 4px 24px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(6, 182, 212, 0.05);
+  
+  /* ── Scrollbar - Cyberpunk ── */
+  --scrollbar-track: #0a0a0f;
+  --scrollbar-thumb: rgba(6, 182, 212, 0.3);
+  --scrollbar-thumb-hover: #06b6d4;
+}
+
+/* Prime Dark Enhancement - Headings with subtle glow */
+:root h1, :root h2, :root h3 {
+  text-shadow: 0 0 30px rgba(6, 182, 212, 0.15);
+}
+
+/* Prime Dark - Card hover effects */
+:root .glass-card:hover {
+  box-shadow: 
+    0 0 20px rgba(6, 182, 212, 0.15),
+    0 8px 32px rgba(0, 0, 0, 0.5);
+}

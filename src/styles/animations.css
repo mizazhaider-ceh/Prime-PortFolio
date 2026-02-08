@@ -1,0 +1,221 @@
+/* ══════════════════════════════════════════════════════════════════════════════
+   ANIMATIONS & KEYFRAMES
+   Includes scrollbar, Matrix rain, floating animations, and more
+══════════════════════════════════════════════════════════════════════════════ */
+
+/* Shimmer animation for card hover shine */
+@keyframes shimmer {
+  0% { transform: translateX(-100%) skewX(-12deg); }
+  100% { transform: translateX(200%) skewX(-12deg); }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   SCROLLBAR STYLING
+══════════════════════════════════════════════════════════════════════════════ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   KEYFRAME ANIMATIONS
+══════════════════════════════════════════════════════════════════════════════ */
+
+/* Float Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Pulse Soft */
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 3s ease-in-out infinite;
+}
+
+/* Pulse Glow */
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.3); 
+  }
+  50% { 
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.6); 
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   MATRIX RAIN BACKGROUND ANIMATION
+   120 columns with varying speeds and delays for authentic Matrix effect
+══════════════════════════════════════════════════════════════════════════════ */
+
+.matrix-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  display: flex;
+  overflow: hidden;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.matrix-pattern {
+  position: relative;
+  width: 1000px;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.matrix-column {
+  position: absolute;
+  top: -100%;
+  width: 20px;
+  height: 100%;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  animation: fall linear infinite;
+  white-space: nowrap;
+  will-change: transform, opacity;
+  contain: layout style;
+}
+
+.matrix-column::before {
+  content: "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #ffffff 5%,
+    #00ff41 10%,
+    #00ff41 20%,
+    #00dd33 30%,
+    #00bb22 40%,
+    #009911 50%,
+    #007700 60%,
+    #005500 70%,
+    #003300 80%,
+    rgba(0, 255, 65, 0.5) 90%,
+    transparent 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  writing-mode: vertical-lr;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Matrix Column Positioning & Timing - 15 Columns (reduced for performance) */
+.matrix-column:nth-child(1) { left: 0px; animation-delay: -2.5s; animation-duration: 3s; }
+.matrix-column:nth-child(2) { left: 70px; animation-delay: -3.2s; animation-duration: 4s; }
+.matrix-column:nth-child(3) { left: 140px; animation-delay: -1.8s; animation-duration: 2.5s; }
+.matrix-column:nth-child(4) { left: 210px; animation-delay: -2.9s; animation-duration: 3.5s; }
+.matrix-column:nth-child(5) { left: 280px; animation-delay: -1.5s; animation-duration: 3s; }
+.matrix-column:nth-child(6) { left: 350px; animation-delay: -3.8s; animation-duration: 4.5s; }
+.matrix-column:nth-child(7) { left: 420px; animation-delay: -2.1s; animation-duration: 2.8s; }
+.matrix-column:nth-child(8) { left: 490px; animation-delay: -2.7s; animation-duration: 3.2s; }
+.matrix-column:nth-child(9) { left: 560px; animation-delay: -3.4s; animation-duration: 3.8s; }
+.matrix-column:nth-child(10) { left: 630px; animation-delay: -1.9s; animation-duration: 2.7s; }
+.matrix-column:nth-child(11) { left: 700px; animation-delay: -3.6s; animation-duration: 4.2s; }
+.matrix-column:nth-child(12) { left: 770px; animation-delay: -2.3s; animation-duration: 3.1s; }
+.matrix-column:nth-child(13) { left: 840px; animation-delay: -3.1s; animation-duration: 3.6s; }
+.matrix-column:nth-child(14) { left: 910px; animation-delay: -2.6s; animation-duration: 2.9s; }
+.matrix-column:nth-child(15) { left: 970px; animation-delay: -3.7s; animation-duration: 4.1s; }
+
+/* Character Patterns - Different content for variety */
+.matrix-column:nth-child(odd)::before {
+  content: "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン123456789";
+}
+
+.matrix-column:nth-child(even)::before {
+  content: "ガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポヴァィゥェォャュョッABCDEFGHIJKLMNOPQRSTUVWXYZ";
+}
+
+.matrix-column:nth-child(3n)::before {
+  content: "アカサタナハマヤラワイキシチニヒミリウクスツヌフムユルエケセテネヘメレオコソトノホモヨロヲン0987654321";
+}
+
+.matrix-column:nth-child(4n)::before {
+  content: "ンヲロヨモホノトソコオレメヘネテセケエルユムフヌツスクウリミヒニチシキイワラヤマハナタサカア";
+}
+
+.matrix-column:nth-child(5n)::before {
+  content: "ガザダバパギジヂビピグズヅブプゲゼデベペゴゾドボポヴァィゥェォャュョッ!@#$%^&*()_+-=[]{}|;:,.<>?";
+}
+
+/* Fall Animation */
+@keyframes fall {
+  0% {
+    transform: translateY(-10%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+}
+
+/* Matrix Effect Canvas */
+#matrix-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.05;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   MATRIX RESPONSIVE ADJUSTMENTS
+══════════════════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .matrix-column {
+    font-size: 14px;
+    line-height: 16px;
+    width: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .matrix-column {
+    font-size: 12px;
+    line-height: 14px;
+    width: 15px;
+  }
+}

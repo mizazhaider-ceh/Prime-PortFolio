@@ -1,0 +1,103 @@
+/* ══════════════════════════════════════════════════════════════════════════════
+   BASE STYLES - Core HTML elements, typography, and foundational styles
+   Note: Fonts, Tailwind, and @theme are in main index.css
+══════════════════════════════════════════════════════════════════════════════ */
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   UNIVERSAL & HTML ELEMENT STYLES
+══════════════════════════════════════════════════════════════════════════════ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Mobile optimizations */
+  -webkit-tap-highlight-color: rgba(6, 182, 212, 0.3);
+  -webkit-text-size-adjust: 100%;
+  touch-action: manipulation;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  background-image: var(--color-bg-gradient);
+  background-attachment: fixed;
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Mobile performance */
+  -webkit-overflow-scrolling: touch;
+  text-rendering: optimizeSpeed;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   IMAGE & GIF RENDERING - High Quality
+══════════════════════════════════════════════════════════════════════════════ */
+
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+img[src$=".gif"] {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   TYPOGRAPHY - Headings, Paragraphs, Links
+══════════════════════════════════════════════════════════════════════════════ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-cyber);
+  color: var(--color-text-heading);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+
+p {
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   UTILITY CLASSES - Base Level
+══════════════════════════════════════════════════════════════════════════════ */
+
+.font-cyber {
+  font-family: var(--font-cyber);
+}

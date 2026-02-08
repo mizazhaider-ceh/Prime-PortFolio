@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaGithub, FaStar, FaExternalLinkAlt, FaTerminal, FaWindows, FaRobot, FaShieldAlt, FaGraduationCap, FaSearchengin, FaNetworkWired, FaGlobe, FaCode, FaBrain, FaKey, FaMap, FaBook, FaLock } from 'react-icons/fa';
+import { FaGithub, FaStar, FaExternalLinkAlt, FaTerminal, FaWindows, FaRobot, FaShieldAlt, FaGraduationCap, FaSearchengin, FaNetworkWired, FaGlobe, FaBrain, FaKey, FaMap, FaBook, FaLock } from 'react-icons/fa';
 import { SiLinux } from 'react-icons/si';
 
 const categories = ['All', 'AI Security', 'Offensive Security', 'DevSecOps', 'Education', 'Strategy & Tools'];

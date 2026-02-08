@@ -1,0 +1,216 @@
+/* ══════════════════════════════════════════════════════════════════════════════
+   UTILITY CLASSES
+   Text effects, transitions, section dividers, 3D transforms, and more
+══════════════════════════════════════════════════════════════════════════════ */
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   TRANSITION & ANIMATION UTILITIES
+══════════════════════════════════════════════════════════════════════════════ */
+
+.transition-smooth {
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   TEXT EFFECTS
+══════════════════════════════════════════════════════════════════════════════ */
+
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--color-accent),
+    var(--color-accent-secondary)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-glow {
+  text-shadow: 0 0 20px var(--color-accent);
+}
+
+.neon-text {
+  text-shadow: 0 0 10px color-mix(in srgb, var(--color-accent) 70%, transparent);
+}
+
+.neon-border {
+  box-shadow: 0 0 5px var(--color-accent), inset 0 0 5px var(--color-accent);
+}
+
+.neon-box {
+  box-shadow: 0 0 10px color-mix(in srgb, var(--color-accent) 20%, transparent);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   LINK EFFECTS
+══════════════════════════════════════════════════════════════════════════════ */
+
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-accent);
+  transition: width 0.3s ease;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   BUTTON EFFECTS
+══════════════════════════════════════════════════════════════════════════════ */
+
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.btn-shine:hover::before {
+  left: 100%;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   FADE IN EFFECTS
+══════════════════════════════════════════════════════════════════════════════ */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   SECTION DIVIDERS
+══════════════════════════════════════════════════════════════════════════════ */
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-border),
+    transparent
+  );
+  margin: 4rem 0;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   PERFORMANCE OPTIMIZATIONS & 3D TRANSFORMS
+══════════════════════════════════════════════════════════════════════════════ */
+
+/* Content-Visibility for off-screen sections */
+section:not(:first-of-type) {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}
+
+/* Hardware Acceleration */
+.glass-card,
+.card-hover,
+.feature-card,
+[class*="motion-"] {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* 3D Transform Utilities */
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.hover-3d:hover {
+  transform: translateY(-8px) rotateX(5deg) scale(1.02);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Floating Effect */
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   FOCUS STATES - Accessibility
+══════════════════════════════════════════════════════════════════════════════ */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   REDUCED MOTION - Accessibility
+══════════════════════════════════════════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   RESPONSIVE ADJUSTMENTS - Mobile Performance
+══════════════════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .glass,
+  .glass-card,
+  .feature-card,
+  .subject-card {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+  
+  .card-lift:hover,
+  .card-hover:hover {
+    transform: none;
+  }
+}

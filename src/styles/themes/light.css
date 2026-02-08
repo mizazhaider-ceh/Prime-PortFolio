@@ -1,0 +1,171 @@
+/* ══════════════════════════════════════════════════════════════════════════════
+   IVORY LIGHT THEME - Premium Ivory Elegance
+   A sophisticated, warm light theme with elegant typography and soft aesthetics
+══════════════════════════════════════════════════════════════════════════════ */
+
+[data-theme="light"] {
+  color-scheme: light;
+  
+  /* ── Custom Light Theme Fonts ── */
+  --font-light-heading: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+  --font-light-body: 'Plus Jakarta Sans', 'Sora', sans-serif;
+  --font-light-mono: 'Fira Code', monospace;
+  
+  /* ── Background & Gradients - Warm Ivory ── */
+  --color-bg-primary: #fefdfb;
+  --color-bg-secondary: rgba(255, 253, 250, 0.95);
+  --color-bg-tertiary: rgba(250, 247, 242, 0.98);
+  --color-bg-gradient: 
+    linear-gradient(145deg, 
+      #fefdfb 0%, 
+      #faf7f2 25%,
+      #f5f0e8 50%,
+      #faf7f2 75%,
+      #fefdfb 100%
+    );
+  
+  /* ── Text Colors - Rich & Readable ── */
+  --color-text-primary: #2d3748;
+  --color-text-secondary: #718096;
+  --color-text-heading: #1a202c;
+  
+  /* ── Accent Colors - Elegant Teal & Gold ── */
+  --color-accent: #0d9488;
+  --color-accent-secondary: #b45309;
+  --color-accent-hover: #0f766e;
+  --color-accent-dim: rgba(13, 148, 136, 0.08);
+  
+  /* ── Borders - Soft & Subtle ── */
+  --color-border: rgba(45, 55, 72, 0.12);
+  --color-border-subtle: rgba(45, 55, 72, 0.06);
+  
+  /* ── Glass Effects - Frosted Cream ── */
+  --glass-bg: rgba(255, 253, 250, 0.85);
+  --glass-bg-dark: rgba(250, 247, 242, 0.95);
+  --glass-border: 1px solid rgba(45, 55, 72, 0.08);
+  --glass-blur: blur(20px);
+  
+  /* ── Shadow Effects - Soft & Elegant ── */
+  --shadow-glow: 
+    0 1px 3px rgba(0, 0, 0, 0.04),
+    0 4px 12px rgba(0, 0, 0, 0.06),
+    0 12px 40px rgba(13, 148, 136, 0.08);
+  --shadow-glow-strong: 
+    0 2px 8px rgba(0, 0, 0, 0.06),
+    0 8px 24px rgba(0, 0, 0, 0.08),
+    0 24px 60px rgba(13, 148, 136, 0.12);
+  --shadow-card: 
+    0 1px 2px rgba(0, 0, 0, 0.03),
+    0 4px 16px rgba(0, 0, 0, 0.05);
+  --shadow-card-hover: 
+    0 4px 12px rgba(0, 0, 0, 0.06),
+    0 12px 32px rgba(13, 148, 136, 0.1);
+  
+  /* ── Scrollbar ── */
+  --scrollbar-track: #faf7f2;
+  --scrollbar-thumb: rgba(13, 148, 136, 0.25);
+  --scrollbar-thumb-hover: #0d9488;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   LIGHT THEME TYPOGRAPHY OVERRIDES
+══════════════════════════════════════════════════════════════════════════════ */
+
+[data-theme="light"] body {
+  font-family: var(--font-light-body);
+  letter-spacing: -0.01em;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6 {
+  font-family: var(--font-light-heading);
+  color: var(--color-text-heading);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+[data-theme="light"] p {
+  line-height: 1.7;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   LIGHT THEME CARD STYLING
+══════════════════════════════════════════════════════════════════════════════ */
+
+[data-theme="light"] .glass-card {
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="light"] .glass-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   LIGHT THEME ACCENT TEXT & BUTTONS
+══════════════════════════════════════════════════════════════════════════════ */
+
+[data-theme="light"] .text-\[var\(--color-accent\)\] {
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+[data-theme="light"] button,
+[data-theme="light"] a {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="light"] button:hover,
+[data-theme="light"] a:hover {
+  transform: translateY(-1px);
+}
+
+[data-theme="light"] a:not(.no-hover) {
+  position: relative;
+}
+
+[data-theme="light"] a:not(.no-hover):hover {
+  color: var(--color-accent);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   LIGHT THEME GRADIENT ACCENT BAR
+══════════════════════════════════════════════════════════════════════════════ */
+
+[data-theme="light"]::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    #0d9488, #14b8a6, #06b6d4, #b45309, #f59e0b, #0d9488
+  );
+  background-size: 200% 100%;
+  animation: gradientShift 10s ease infinite;
+  z-index: 10000;
+  box-shadow: 0 1px 3px rgba(13, 148, 136, 0.3);
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   LIGHT THEME SECTION BACKGROUNDS
+══════════════════════════════════════════════════════════════════════════════ */
+
+[data-theme="light"] section {
+  position: relative;
+}

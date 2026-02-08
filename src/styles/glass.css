@@ -1,0 +1,200 @@
+/* ══════════════════════════════════════════════════════════════════════════════
+   GLASS MORPHISM SYSTEM
+   Multiple glass variants with backdrop blur, transparency, and borders
+══════════════════════════════════════════════════════════════════════════════ */
+
+/* Standard Glass */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  contain: layout style;
+  will-change: transform;
+}
+
+/* Dark Glass Variant */
+.glass-dark {
+  background: var(--glass-bg-dark);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border-subtle);
+  contain: layout style;
+}
+
+/* Subtle Glass (Less Blur) */
+.glass-subtle {
+  background: var(--glass-bg);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  contain: layout style;
+}
+
+/* Heavy Glass (More Blur) */
+.glass-heavy {
+  background: var(--glass-bg-dark);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--color-border-subtle);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   GLASS CARD - Enhanced with Better Shadows & Transitions
+══════════════════════════════════════════════════════════════════════════════ */
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: var(--glass-border);
+  border-radius: 1rem;
+  contain: layout style;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.08),
+    0 8px 32px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-accent),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 
+    var(--shadow-glow),
+    0 12px 48px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border-color: var(--color-accent);
+}
+
+.glass-card:hover::before {
+  opacity: 0.6;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   GLOW EFFECTS
+══════════════════════════════════════════════════════════════════════════════ */
+
+.glow {
+  box-shadow: var(--shadow-glow);
+}
+
+.glow-strong {
+  box-shadow: var(--shadow-glow-strong);
+}
+
+.glow-border {
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  box-shadow: var(--shadow-glow), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.glow-pulse {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(6, 182, 212, 0.5);
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   HOVER EFFECTS
+══════════════════════════════════════════════════════════════════════════════ */
+
+.card-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-lift:hover {
+  transform: translateY(-0.25rem) scale(1.02);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+}
+
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: var(--shadow-glow), 0 20px 40px -8px rgba(0, 0, 0, 0.3);
+}
+
+/* Gradient Border Animation */
+.border-gradient-animated {
+  position: relative;
+  border: 0.125rem solid transparent;
+  background-clip: padding-box;
+}
+
+.border-gradient-animated::before {
+  content: '';
+  position: absolute;
+  inset: -0.125rem;
+  z-index: -1;
+  background: linear-gradient(45deg, var(--color-accent), transparent, var(--color-accent));
+  background-size: 200% 200%;
+  border-radius: inherit;
+  animation: borderRotate 3s linear infinite;
+}
+
+@keyframes borderRotate {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Ripple Effect */
+.ripple-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-effect::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%) scale(0);
+  pointer-events: none;
+}
+
+.ripple-effect:active::after {
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
+  }
+}
