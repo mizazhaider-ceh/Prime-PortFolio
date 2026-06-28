@@ -60,16 +60,14 @@ const roles = [
   {
     icon: <FaShieldAlt className="text-white text-lg" />,
     iconBg: 'bg-gradient-to-br from-orange-500 to-red-600',
-    title: 'Junior DevSecOps & AI Security Engineer',
-    org: 'Damno Solutions CBAM',
-    meta: 'Nov 2025 – Present | Belgium (Remote)',
+    title: 'Security Research & Freelance Projects',
+    org: 'Independent / Contract Engagement',
+    meta: '2025 – 2026 | Belgium (Remote)',
     intro: 'Below are some of my key responsibilities and achievements:',
     bullets: [
-      'DevSecOps – I combine dev, security, and ops to validate and harden environments and pipelines',
-      'AI security – I build and use LLM-based tools for vulnerability scanning and API/cost optimization.',
-      'Infrastructure engineering – I work on servers, networking, and staging/production readiness.',
-      'Security engineering – I find and fix vulns, create hardening checklists, and design secure access paths',
-      'Collaboration – I take the tickets, keep stakeholders updated, and turn complex setups into clear, documented steps the whole team can reuse.',
+      'Conducted application security work on a live sustainability platform (CI/CD hardening, API security, LLM-based vulnerability scanning)',
+      'Delivered penetration testing and bug bounty assessments',
+      'Built and maintained secure DevSecOps pipelines (GitLab CI, Docker)',
     ],
   },
   {

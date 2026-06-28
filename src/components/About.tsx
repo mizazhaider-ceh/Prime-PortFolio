@@ -115,11 +115,11 @@ export default function About() {
                   </div>
                   <div className="flex items-center gap-2 text-[var(--color-text-secondary)] justify-center lg:justify-start">
                     <FaRocket className="text-[var(--color-accent)] flex-shrink-0" />
-                    <span className="text-xs">Founder & CEO, PenTrix</span>
+                    <span className="text-xs">Founder, The PenTrix</span>
                   </div>
                   <div className="flex items-center gap-2 text-[var(--color-text-secondary)] justify-center lg:justify-start">
                     <FaShieldAlt className="text-[var(--color-accent)] flex-shrink-0" />
-                    <span className="text-xs">Pentester | DevSecOps | Security Engineer</span>
+                    <span className="text-xs">Penetration Tester | AI × Offensive Security</span>
                   </div>
                 </div>
               </div>
@@ -142,8 +142,8 @@ export default function About() {
                   transition={{ delay: 0.1 }}
                   className="text-base sm:text-lg"
                 >
-                  I'm a <span className="text-[var(--color-accent)] font-bold text-lg sm:text-xl">cybersecurity innovator</span> with over <span className="text-[var(--color-text-heading)] font-semibold">4 years</span> of hands-on experience in offensive security, Development, AI integration. My journey began with a fascination for ethical hacking and has evolved into pioneering{' '}
-                  <span className="text-[var(--color-accent)] font-bold">AI-powered security solutions</span>.
+                  I'm a <span className="text-[var(--color-accent)] font-bold text-lg sm:text-xl">penetration tester</span> and offensive security researcher who started breaking things at <span className="text-[var(--color-text-heading)] font-semibold">age 14</span> — before I even knew it had a name. Today I combine hands-on offensive security with{' '}
+                  <span className="text-[var(--color-accent)] font-bold">AI-powered tooling</span> that solves real security problems.
                 </motion.p>
                 
                 <motion.div
@@ -154,7 +154,7 @@ export default function About() {
                   className="border-l-4 border-[var(--color-accent)] pl-4 sm:pl-6 py-2 bg-gradient-to-r from-[var(--color-accent)]/5 to-transparent rounded-r-lg"
                 >
                   <p className="text-base sm:text-lg">
-                    Currently pursuing my <span className="text-[var(--color-text-heading)] font-bold text-lg sm:text-xl">BSc in Cybersecurity</span> at Howest University, Belgium, I've maintained a stellar <span className="text-[var(--color-accent)] font-bold text-lg sm:text-xl">16.4 GPA</span> while simultaneously working as a DevSecOps Engineer. My academic excellence is matched by real-world impact – I've developed <span className="text-[var(--color-accent)] font-bold">Various Tools,Platforms and Projects</span>
+                    I'm studying my <span className="text-[var(--color-text-heading)] font-bold text-lg sm:text-xl">BSc in Cybersecurity</span> at Howest University, Belgium, where I finished my first semester with a <span className="text-[var(--color-accent)] font-bold text-lg sm:text-xl">16.40/20 GPA</span> and 30/30 ECTS. My academic work is matched by real-world impact – I've built <span className="text-[var(--color-accent)] font-bold">practical security tools, platforms, and bug bounty research</span>
                   </p>
                 </motion.div>
                 
@@ -165,7 +165,7 @@ export default function About() {
                   transition={{ delay: 0.3 }}
                   className="text-base sm:text-lg"
                 >
-                  As the <span className="text-[var(--color-text-heading)] font-bold text-lg sm:text-xl">Founder & CEO of PenTrix</span>, I'm building an educational platform that democratizes cybersecurity knowledge. My work bridges the gap between traditional penetration testing and modern AI capabilities, creating tools that are both powerful and accessible.
+                  As the <span className="text-[var(--color-text-heading)] font-bold text-lg sm:text-xl">Founder of The PenTrix</span>, I'm building a cybersecurity learning initiative that gives beginners a clear, practical path into offensive security and AI in cybersecurity — without the noise.
                 </motion.p>
                 
                 <motion.div

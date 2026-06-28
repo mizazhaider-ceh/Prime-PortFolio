@@ -81,9 +81,9 @@ export default function Hero() {
                 <Typewriter
                   words={[
                     'Penetration Tester',
-                    'Security Engineer',
-                    'Ai x Cybersecurity',
-                    'DevSecOps Engineer',
+                    'AI × Security Researcher',
+                    'Founder @ The PenTrix',
+                    'Bug Bounty Hunter',
                   ]}
                   loop={0}
                   cursor
@@ -103,9 +103,9 @@ export default function Hero() {
               transition={{ delay: 0.8 }}
               className="text-base sm:text-lg lg:text-xl text-[var(--color-text-secondary)] max-w-xl mx-auto lg:mx-0 leading-relaxed"
             >
-              19-year-old pentester and security engineer, now building 
-              <span className="text-[var(--color-text-heading)] font-medium"> AI-powered solutions and securing real‑world infrastructure </span> 
-            
+              19-year-old offensive security researcher breaking systems to make them stronger. Building
+              <span className="text-[var(--color-text-heading)] font-medium"> AI-powered security tools </span>
+              and sharing knowledge through The PenTrix.
             </motion.p>
 
             {/* CTA Buttons */}

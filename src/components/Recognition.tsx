@@ -47,7 +47,7 @@ const achievements = [
     icon: FaBirthdayCake,
     title: "19 Years Old",
     subtitle: "The Beginning",
-    details: ["Hired in first year", "Self-taught since age 14"],
+    details: ["First project at age 14", "Self-taught since day one"],
     color: "text-cyan-400 border-cyan-500/30"
   }
 ];

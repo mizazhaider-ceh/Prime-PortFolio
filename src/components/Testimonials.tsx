@@ -3,18 +3,11 @@ import { FaQuoteLeft, FaLinkedin, FaStar } from 'react-icons/fa';
 
 const testimonials = [
   {
-    quote: "Muhammad approaches security engineering with a rare blend of technical depth and strategic thinking. He doesn't just look for vulnerabilities — he analyzes systems holistically, designs secure architectures, and consistently documents his work to production-grade standards. On the CBAM platform, he has contributed significantly to secure ingestion APIs, async validation infrastructure, and DevSecOps pipeline hardening — always combining security-first principles with strong collaboration and ownership.",
+    quote: "Muhammad approaches security engineering with a rare blend of technical depth and strategic thinking. He doesn't just look for vulnerabilities — he analyzes systems holistically, designs secure architectures, and consistently documents his work to production-grade standards.",
     author: "Jo Van Montfort",
     role: "Founder, DigiaCarbon",
     icon: FaLinkedin,
     highlight: true
-  },
-  {
-    quote: "100+ hands-on labs completed. CTF challenges, real penetration tests, and practical security audits.",
-    author: "Skills Portfolio",
-    role: "Practical Experience",
-    icon: FaStar,
-    highlight: false
   },
   {
     quote: "Pakistan to Belgium cybersecurity journey - proof that talent knows no geography. The Next-Gen Technologist.",

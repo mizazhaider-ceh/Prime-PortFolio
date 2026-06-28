@@ -36,8 +36,8 @@ const skillsData: SkillCategory[] = [
     skills: [
       { name: "DevSecOps", level: 92, color: "text-blue-400" },
       { name: "CI/CD Security", level: 88, color: "text-cyan-400" },
-      { name: "Cloud Security", level: 85, color: "text-blue-300" },
-      { name: "Incident Response", level: 87, color: "text-sky-400" },
+      { name: "API Security", level: 88, color: "text-blue-300" },
+      { name: "Secure Code Review", level: 85, color: "text-sky-400" },
       { name: "Security Automation", level: 93, color: "text-cyan-300" }
     ]
   },
@@ -50,7 +50,7 @@ const skillsData: SkillCategory[] = [
     skills: [
       { name: "AI Security", level: 90, color: "text-purple-400" },
       { name: "LLM Integration", level: 88, color: "text-pink-400" },
-      { name: "Gemini AI", level: 92, color: "text-fuchsia-400" },
+      { name: "AI Integration", level: 92, color: "text-fuchsia-400" },
       { name: "RAG Technology", level: 89, color: "text-violet-400" },
       { name: "Prompt Engineering", level: 91, color: "text-purple-300" }
     ]
@@ -84,17 +84,15 @@ const skillsData: SkillCategory[] = [
     ]
   },
   {
-    name: "Web Development",
+    name: "Supporting Tech",
     icon: FaReact,
     color: "from-indigo-500 to-blue-500",
     iconColor: "text-indigo-400",
     textColor: "text-indigo-400",
     skills: [
-      { name: "React", level: 93, color: "text-cyan-400" },
-      { name: "Next.js", level: 92, color: "text-white" },
       { name: "HTML5", level: 95, color: "text-orange-400" },
       { name: "CSS3", level: 93, color: "text-blue-400" },
-      { name: "Vanilla JS/DOM", level: 91, color: "text-yellow-400" }
+      { name: "JavaScript", level: 91, color: "text-yellow-400" }
     ]
   },
   {
@@ -106,7 +104,7 @@ const skillsData: SkillCategory[] = [
     skills: [
       { name: "FastAPI", level: 91, color: "text-teal-400" },
       { name: "SQL Server", level: 88, color: "text-red-400" },
-      { name: "JSON", level: 95, color: "text-yellow-300" },
+      { name: "REST APIs", level: 90, color: "text-yellow-300" },
       { name: "Redis", level: 82, color: "text-red-500" },
       { name: "PostgreSQL", level: 90, color: "text-blue-400" }
     ]
@@ -219,7 +217,7 @@ export default function Skills() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            {skillsData.reduce((acc, cat) => acc + cat.skills.length, 0)}+ Skills across {skillsData.length} categories • DevSecOps Engineer
+            {skillsData.reduce((acc, cat) => acc + cat.skills.length, 0)}+ Skills • Offensive Security · AI in Cybersecurity · Practical Tools
           </motion.p>
         </motion.div>
 

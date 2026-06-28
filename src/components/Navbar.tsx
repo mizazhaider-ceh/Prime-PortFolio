@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { HiMenuAlt3, HiX } from 'react-icons/hi';
+import { HiMenuAlt3, HiX, HiDownload } from 'react-icons/hi';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import ThemeSwitcher from './ThemeSwitcher';
 
@@ -116,7 +116,7 @@ export default function Navbar() {
                   Muhammad Izaz Haider
                 </motion.span>
                 <span className="hidden sm:block text-[10px] sm:text-xs font-mono text-[var(--color-accent-secondary)] opacity-70">
-                  Pentester | AI & Security Engineer | DevSecOps
+                  Penetration Tester | AI × Offensive Security | Founder @ The PenTrix
                 </span>
               </div>
             </motion.div>
@@ -302,16 +302,16 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
               >
-                <a 
-                  href="https://github.com/mizazhaider" 
+                <a
+                  href="https://github.com/mizazhaider-ceh?tab=repositories"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-2xl text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors"
                 >
                   <FaGithub />
                 </a>
-                <a 
-                  href="https://linkedin.com/in/mizazhaider" 
+                <a
+                  href="https://www.linkedin.com/in/muhammad-izaz-haider-091639314/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-2xl text-[var(--color-text-secondary)] hover:text-[var(--color-accent)] transition-colors"

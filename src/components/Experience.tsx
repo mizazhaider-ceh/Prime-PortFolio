@@ -19,18 +19,18 @@ const experiences: ExperienceItem[] = [
   {
     icon: FaShieldAlt,
     iconBg: 'bg-gradient-to-br from-orange-500 to-red-600',
-    title: 'Junior DevSecOps & AI Security Engineer',
-    company: 'Damno Solutions CBAM',
-    type: 'Part-time',
-    duration: 'Nov 2025 - Present · 4 mos',
+    title: 'Security Engineer (Contract)',
+    company: 'Sustainability Platform · Freelance',
+    type: 'Contract',
+    duration: 'Nov 2025 - Mar 2026 · 4 mos',
     location: 'Belgium · Remote',
-    description: 'Securing multi-region cloud infrastructure and the CBAM platform while advancing AI-driven security automation for a greener, sustainable future. 🌍🔐🤖',
+    description: 'Application security and DevSecOps work on a live climate/sustainability platform — hardening pipelines, securing APIs, and building AI-assisted security tooling. 🌍🔐',
     highlights: [
-      'Hardening CI/CD pipelines & Kubernetes containers across EMEA/APAC ☁️',
-      'Building LLM-powered vulnerability scanners & AI-assisted SAST/SCA tools',
-      'Conducting security-focused code reviews, penetration testing, and bug bounty assessments 💻',
-      'Delivered production-ready pipelines, fixed critical RCE & SQLi vulnerabilities',
-      'Optimizing APIs achieving 95% cost reduction',
+      'Supported hardening of CI/CD pipelines and containerized workloads',
+      'Assisted in building LLM-assisted vulnerability scanners and SAST tools',
+      'Conducted security-focused code reviews and penetration testing of APIs',
+      'Helped deliver production-ready pipelines and documented security fixes',
+      'Contributed to API optimization and secure access design',
     ],
   },
   {
@@ -42,7 +42,7 @@ const experiences: ExperienceItem[] = [
     duration: 'Mar 2025 - May 2025 · 3 mos',
     location: 'Remote',
     description: 'Cybersecurity enthusiast bolstering network defense skills by developing a basic sniffer and reinforcing user awareness through comprehensive phishing training initiatives.',
-    skills: ['Python', 'Social Engineering', 'Network Security', '+10 skills'],
+    skills: ['Python', 'Social Engineering', 'Network Security'],
   },
   {
     icon: FaBriefcase,
@@ -53,7 +53,7 @@ const experiences: ExperienceItem[] = [
     duration: 'Jan 2025 - Apr 2025 · 4 mos',
     location: 'Remote',
     description: 'Applied cybersecurity intern leveraging ethical hacking and penetration testing skills along with programming and AI utilization to develop security solutions and tools.',
-    skills: ['Python', 'Networking', 'Penetration Testing', '+11 skills'],
+    skills: ['Python', 'Networking', 'Penetration Testing'],
   },
 ];
 
