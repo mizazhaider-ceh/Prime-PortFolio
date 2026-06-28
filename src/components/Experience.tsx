@@ -22,7 +22,7 @@ const experiences: ExperienceItem[] = [
     title: 'Security Engineer (Contract)',
     company: 'Sustainability Platform · Freelance',
     type: 'Contract',
-    duration: 'Nov 2025 - Mar 2026 · 4 mos',
+    duration: 'Nov 2025 - Jun 2026 · 8 mos',
     location: 'Belgium · Remote',
     description: 'Application security and DevSecOps work on a live climate/sustainability platform — hardening pipelines, securing APIs, and building AI-assisted security tooling. 🌍🔐',
     highlights: [
