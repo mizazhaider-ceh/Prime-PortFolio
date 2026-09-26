@@ -28,6 +28,7 @@ const experiences: ExperienceItem[] = [
     highlights: [
       'Earned official YesWeHack recognition + swag for consistent performance',
       'Reported an Unrestricted File Upload (CWE-434): accepted, +12 reputation',
+      'Paid bounties on YesWeHack: 500 euros (Information Disclosure, CWE-200, CVSS 4.4 Medium) and $80 (Information Disclosure, CWE-200), March 2026',
       'Focus areas: Web Application Security, API Security, Authentication & Authorization, AI-assisted security research',
       'Chaining low-severity findings into higher-impact exploit paths',
     ],

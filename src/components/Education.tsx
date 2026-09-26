@@ -37,12 +37,19 @@ const cardsData = [
         ]
       },
       {
-        heading: 'NOW IN YEAR 2 (SEMESTER 3):',
+        heading: 'YEAR 2, SEMESTER 3 (CURRENT):',
         items: [
-          'Mobile Security, Web Pentesting Advanced, Cybercrime and Warfare',
-          'Linux Server Security, Windows Server Security',
-          'Digital Forensics Analysis',
-          'Practical Reverse Engineering & Malware Analysis',
+          'Mobile Security (3 SP), Web Pentesting Advanced (3 SP), Cybercrime and Warfare (3 SP)',
+          'Linux Server Security (6 SP), Windows Server Security (6 SP)',
+          'Digital Forensics Analysis (6 SP), Practical Reverse Engineering & Malware Analysis (3 SP)',
+        ]
+      },
+      {
+        heading: 'YEAR 2, SEMESTER 4 (NEXT):',
+        items: [
+          'Web Security and Honeypot (6 SP), Network and System Pentesting (6 SP)',
+          'Datacenter Virtualisation and Cloud Security (6 SP), Cyberops (6 SP)',
+          'Risk Management, Threat Modelling and Security Policy (3 SP), International Project (3 SP)',
         ]
       }
     ],
