@@ -1,7 +1,90 @@
 import { motion } from 'framer-motion';
-import { FaTv, FaUserGraduate, FaFlask, FaStar, FaCertificate, FaBirthdayCake } from 'react-icons/fa';
+import { FaTv, FaUserGraduate, FaFlask, FaStar, FaCertificate, FaBirthdayCake, FaTrophy, FaBug } from 'react-icons/fa';
+import type { IconType } from 'react-icons';
 
-const achievements = [
+interface AchievementImage {
+  src: string;
+  alt: string;
+}
+
+interface Achievement {
+  type: string;
+  icon: IconType;
+  title: string;
+  subtitle: string;
+  details: string[];
+  color: string;
+  images?: AchievementImage[];
+}
+
+const achievements: Achievement[] = [
+  {
+    type: "CTF",
+    icon: FaTrophy,
+    title: "#1 in Web",
+    subtitle: "CSCB 2026 · Junior Division",
+    details: ["#1 on the Junior Web leaderboard", "1669 points in the Web category", "Belgium's national CTF, CSCB 2026"],
+    color: "text-red-400 border-red-500/30",
+    images: [
+      { src: "/images/cscb-web-first.png", alt: "CSCB 2026 Web category leaderboard: Muhammad Izaz Haider ranked #1 in Junior with 1669 points" },
+      { src: "/images/cscb-rankings.png", alt: "ECSC Rankings page showing the full Junior and Senior division scoreboards" },
+    ],
+  },
+  {
+    type: "CTF",
+    icon: FaTrophy,
+    title: "#3 Junior · #26/806",
+    subtitle: "CSCB 2026 National CTF",
+    details: ["#3 Junior Division, 6576 points, 26 solves", "26th place nationally out of 806 competitors", "Solve mix: Pwn 23%, RE 19%, Web 19%, Forensics 19%, Crypto 15%"],
+    color: "text-red-400 border-red-500/30",
+    images: [
+      { src: "/images/cscb-junior-top3.png", alt: "Junior Division scoreboard: Muhammad Izaz Haider at #3 with 6576 points and 26 solves" },
+      { src: "/images/cscb-26th-place.png", alt: "CSCB profile showing 26th place with 6701 points" },
+      { src: "/images/cscb-solves-breakdown.png", alt: "Solve breakdown by category with score over time graph" },
+    ],
+  },
+  {
+    type: "Bug Bounty",
+    icon: FaBug,
+    title: "Recognized Hunter",
+    subtitle: "YesWeHack · MIHX01",
+    details: ["Verified handle MIHX01 on YesWeHack", "Official quarterly recognition for performance", "Exclusive swag: t-shirt, stickers, keychain"],
+    color: "text-pink-400 border-pink-500/30",
+    images: [
+      { src: "/images/yeswehack-swag.png", alt: "YesWeHack achievement swag: No Bugs Left Behind t-shirt, stickers, poster and keychain" },
+      { src: "/images/yeswehack-email.png", alt: "YesWeHack email recognizing and celebrating quarterly performance" },
+    ],
+  },
+  {
+    type: "Bug Bounty",
+    icon: FaBug,
+    title: "€500 Bounty",
+    subtitle: "YesWeHack · Information Disclosure",
+    details: ["Information Disclosure (CWE-200)", "CVSS 4.4, Medium severity", "Valid report, March 2026, +23 pts"],
+    color: "text-pink-400 border-pink-500/30",
+    images: [
+      { src: "/images/bounty-eur500.png", alt: "YesWeHack bounty card: 500 euros for Information Disclosure, CWE-200, CVSS 4.4 Medium" },
+    ],
+  },
+  {
+    type: "Bug Bounty",
+    icon: FaBug,
+    title: "$80 Bounty",
+    subtitle: "YesWeHack · Information Disclosure",
+    details: ["Information Disclosure (CWE-200)", "Valid report, March 2026, +50 pts"],
+    color: "text-pink-400 border-pink-500/30",
+    images: [
+      { src: "/images/bounty-usd80.png", alt: "YesWeHack bounty card: $80 for Information Disclosure, CWE-200" },
+    ],
+  },
+  {
+    type: "Academic",
+    icon: FaUserGraduate,
+    title: "60/60 ECTS",
+    subtitle: "Howest University",
+    details: ["First attempt, no retakes", "18/20 in Programming, Architecture, Web Backend", "17/20 across pentesting, CTF, Linux, networks"],
+    color: "text-blue-400 border-blue-500/30"
+  },
   {
     type: "Hands-On",
     icon: FaFlask,
@@ -11,45 +94,21 @@ const achievements = [
     color: "text-green-400 border-green-500/30"
   },
   {
-    type: "Academic",
-    icon: FaUserGraduate,
-    title: "16.40/20 CGPA",
-    subtitle: "Howest University",
-    details: ["30/30 ECTS first semester", "Working 20hrs/week"],
-    color: "text-blue-400 border-blue-500/30"
-  },
-  {
     type: "Community",
     icon: FaStar,
     title: "55+ Stars",
     subtitle: "GitHub Impact",
-    details: ["32 stars on Ai-Terminal-X", "Active open source contrib"],
+    details: ["38 stars on Ai-Terminal-X", "Active open source contrib"],
     color: "text-yellow-400 border-yellow-500/30"
-  },
-  {
-    type: "Media",
-    icon: FaTv,
-    title: "National TV",
-    subtitle: "Recognition",
-    details: ["'Next-Gen Technologist'", "ABN News Morning Show"],
-    color: "text-purple-400 border-purple-500/30"
   },
   {
     type: "Certs",
     icon: FaCertificate,
-    title: "50+ Certs",
+    title: "53 Certs",
     subtitle: "Continuous Learning",
-    details: ["IBM, Google, CompTIA", "From fundamentals to advanced"],
+    details: ["eJPTv2 + eWPT in progress", "IBM, Google, CodeRed, CompTIA"],
     color: "text-orange-400 border-orange-500/30"
   },
-  {
-    type: "Personal",
-    icon: FaBirthdayCake,
-    title: "19 Years Old",
-    subtitle: "The Beginning",
-    details: ["First project at age 14", "Self-taught since day one"],
-    color: "text-cyan-400 border-cyan-500/30"
-  }
 ];
 
 export default function Recognition() {
@@ -89,6 +148,21 @@ export default function Recognition() {
                 </li>
               ))}
             </ul>
+
+            {item.images && item.images.length > 0 && (
+              <div className="flex flex-wrap gap-3 mt-6 relative z-10">
+                {item.images.map((img) => (
+                  <a key={img.src} href={img.src} target="_blank" rel="noopener noreferrer" aria-label={img.alt}>
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      loading="lazy"
+                      className="h-20 md:h-24 w-auto rounded-lg border border-white/10 object-cover hover:scale-105 hover:border-white/30 transition-all duration-300 cursor-pointer"
+                    />
+                  </a>
+                ))}
+              </div>
+            )}
           </motion.div>
         ))}
       </div>

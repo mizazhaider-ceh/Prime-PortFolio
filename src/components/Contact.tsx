@@ -41,7 +41,7 @@ export default function Contact() {
     <section id="contact" className="py-16 md:py-24 px-4 sm:px-6 max-w-7xl mx-auto mb-12 md:mb-20">
       <div className="flex flex-col items-center mb-12 md:mb-16 text-center">
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-[var(--color-text-heading)] font-cyber mb-4">Let's Build The Future</h2>
-        <p className="text-sm sm:text-base text-[var(--color-text-secondary)]">Open to Offensive Security, Bug Bounty Collaboration, and AI × Cybersecurity Roles</p>
+        <p className="text-sm sm:text-base text-[var(--color-text-secondary)]">Open to Offensive & Defensive Security, Bug Bounty Collaboration, and AI x Cybersecurity Roles</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">

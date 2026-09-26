@@ -5,19 +5,17 @@ const cardsData = [
   {
     icon: FaShieldAlt,
     iconBg: 'bg-gradient-to-br from-amber-500 to-orange-600',
-    title: 'Junior DevSecOps   &  AI Security Engineer',
-    subtitle: 'Damno Solutions CBAM | Nov 2025 - Present | Belgium (Remote)',
+    title: 'Junior Security Engineer',
+    subtitle: 'Damno Solutions (CBAM Platform) | Nov 2025 - Jun 2026 | Belgium (Remote)',
     sections: [
       {
-        heading: 'Below are some of my key responsibilities and achievements:',
+        heading: 'WHAT I ACTUALLY DID:',
         items: [
-          'DevSecOps – I combine dev, security, and ops to validate and harden environments and pipelines',
-          'AI security – I build and use LLM-based tools for vulnerability scanning and API/cost optimization.',
-          'Infrastructure engineering – I work on servers, networking, and staging/production readiness.',
-          'Security engineering – I find and fix vulns, create hardening checklists, and design secure access paths',
-          'Collaboration – I take the tickets, keep stakeholders updated, and turn complex setups into clear, documented steps the whole team can reuse.'
-
-          
+          'Built and maintained GitLab CI/CD security pipelines for a live platform',
+          'Fixed critical SQLi vulnerabilities in production (269/269 tests passing)',
+          'Security-focused code reviews across the CBAM codebase',
+          'Worked on LLM-assisted security tooling and AI-driven scanning',
+          'Turned complex setups into clear, documented steps the whole team could reuse'
         ]
       }
     ],
@@ -30,22 +28,21 @@ const cardsData = [
     subtitle: 'HOWEST University | Sep 2025 - Present | Belgium',
     sections: [
       {
-        heading: 'FIRST SEMESTER RESULTS (Jan 2026):',
+        heading: 'YEAR 1 RESULTS: FIRST ATTEMPT, NO RETAKES',
         items: [
-          'CGPA: 16.40/20 (≈3.47/4.0)',
-          '30/30 ECTS credits earned',
-          'All courses passed first attempt'
+          'Semester 1: 16.40/20 GPA, 30/30 ECTS',
+          'Semester 2: 60/60 credits, threshold passed',
+          '18/20 in Programming, Computer Architecture & OS, Web Backend',
+          '17/20 in Web Pentesting, Capture the Flag, Linux for Ethical Hackers, Networks, Scripting & Code Analysis'
         ]
       },
       {
-        heading: 'COURSES:',
+        heading: 'NOW IN YEAR 2 (SEMESTER 3):',
         items: [
-          'Cybersecurity Essentials',
-          'Computer Architecture and Operating Systems (Linux/Windows)',
-          'Programming (JavaScript)',
-          'Web Frontend (HTML/CSS/Vanilla JS)',
-          'Databases ( SQL + JSON )',
-          '100+ Labs, Projects & Practical Work',
+          'Mobile Security, Web Pentesting Advanced, Cybercrime and Warfare',
+          'Linux Server Security, Windows Server Security',
+          'Digital Forensics Analysis',
+          'Practical Reverse Engineering & Malware Analysis',
         ]
       }
     ],

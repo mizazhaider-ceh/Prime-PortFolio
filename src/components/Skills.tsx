@@ -38,7 +38,9 @@ const skillsData: SkillCategory[] = [
       { name: "CI/CD Security", level: 88, color: "text-cyan-400" },
       { name: "API Security", level: 88, color: "text-blue-300" },
       { name: "Secure Code Review", level: 85, color: "text-sky-400" },
-      { name: "Security Automation", level: 93, color: "text-cyan-300" }
+      { name: "Security Automation", level: 93, color: "text-cyan-300" },
+      { name: "Digital Forensics", level: 84, color: "text-indigo-300" },
+      { name: "Reverse Engineering", level: 82, color: "text-violet-300" }
     ]
   },
   {

@@ -1,23 +1,30 @@
 import { motion } from 'framer-motion';
-import { FaQuoteLeft, FaLinkedin, FaStar } from 'react-icons/fa';
+import { FaQuoteLeft, FaLinkedin, FaStar, FaTrophy } from 'react-icons/fa';
 
 const testimonials = [
   {
-    quote: "Muhammad approaches security engineering with a rare blend of technical depth and strategic thinking. He doesn't just look for vulnerabilities — he analyzes systems holistically, designs secure architectures, and consistently documents his work to production-grade standards.",
+    quote: "Muhammad approaches security engineering with a rare blend of technical depth and strategic thinking. He doesn't just look for vulnerabilities, he analyzes systems holistically, designs secure architectures, and consistently documents his work to production-grade standards.",
     author: "Jo Van Montfort",
     role: "Founder, DigiaCarbon",
     icon: FaLinkedin,
     highlight: true
   },
   {
-    quote: "Pakistan to Belgium cybersecurity journey - proof that talent knows no geography. The Next-Gen Technologist.",
+    quote: "Ranked #1 in Web and #3 overall in the Junior division at Belgium's national CTF, solving 26 flags against 806 participants including professionals and SOC analysts.",
+    author: "CSCB 2026",
+    role: "Cyber Security Challenge Belgium",
+    icon: FaTrophy,
+    highlight: false
+  },
+  {
+    quote: "Pakistan to Belgium cybersecurity journey, proof that talent knows no geography. The Next-Gen Technologist.",
     author: "PakSphere Recognition",
     role: "Tech Community Pakistan",
     icon: FaStar,
     highlight: false
   },
   {
-    quote: "Graduated with 16.40/20 while working 20 hours per week. Exceptional time management and dedication.",
+    quote: "60/60 ECTS in the very first attempt. No retakes. Top grades in pentesting, networks, Linux, and programming.",
     author: "Academic Record",
     role: "Howest University",
     icon: FaStar,

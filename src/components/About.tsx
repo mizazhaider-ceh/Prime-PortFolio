@@ -44,15 +44,14 @@ export default function About() {
           </motion.div>
           
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--color-text-heading)] mb-4 md:mb-6 px-4">
-            Securing the Digital Future with{' '}
+            I break things for a{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-secondary)]">
-             CyberSecurity & AI & Innovation
+              living
             </span>
           </h2>
           
           <p className="text-base md:text-lg text-[var(--color-text-secondary)] max-w-3xl mx-auto leading-relaxed px-4">
-            A passionate cybersecurity professional merging offensive security expertise 
-            with cutting-edge artificial intelligence to build safer digital ecosystems.
+            Mostly web apps. Occasionally my own sleep schedule. Full-time "why does this parameter behave weird" investigator.
           </p>
         </motion.div>
 
@@ -119,7 +118,7 @@ export default function About() {
                   </div>
                   <div className="flex items-center gap-2 text-[var(--color-text-secondary)] justify-center lg:justify-start">
                     <FaShieldAlt className="text-[var(--color-accent)] flex-shrink-0" />
-                    <span className="text-xs">Penetration Tester | AI × Offensive Security</span>
+                    <span className="text-xs">Offensive + Defensive Security | Bug Bounty @ YesWeHack</span>
                   </div>
                 </div>
               </div>
@@ -142,8 +141,8 @@ export default function About() {
                   transition={{ delay: 0.1 }}
                   className="text-base sm:text-lg"
                 >
-                  I'm a <span className="text-[var(--color-accent)] font-bold text-lg sm:text-xl">penetration tester</span> and offensive security researcher who started breaking things at <span className="text-[var(--color-text-heading)] font-semibold">age 14</span> — before I even knew it had a name. Today I combine hands-on offensive security with{' '}
-                  <span className="text-[var(--color-accent)] font-bold">AI-powered tooling</span> that solves real security problems.
+                  I'm a <span className="text-[var(--color-accent)] font-bold text-lg sm:text-xl">penetration tester</span> and <span className="text-[var(--color-accent)] font-bold text-lg sm:text-xl">bug bounty hunter</span> who started breaking things at <span className="text-[var(--color-text-heading)] font-semibold">age 14</span>, before I even knew it had a name. These days I hunt bugs on <span className="text-[var(--color-text-heading)] font-semibold">YesWeHack</span> (yes, they sent me a t-shirt, no bugs were left behind) and build{' '}
+                  <span className="text-[var(--color-accent)] font-bold">AI-powered security tools</span> that solve real problems instead of collecting dust.
                 </motion.p>
                 
                 <motion.div
@@ -154,7 +153,7 @@ export default function About() {
                   className="border-l-4 border-[var(--color-accent)] pl-4 sm:pl-6 py-2 bg-gradient-to-r from-[var(--color-accent)]/5 to-transparent rounded-r-lg"
                 >
                   <p className="text-base sm:text-lg">
-                    I'm studying my <span className="text-[var(--color-text-heading)] font-bold text-lg sm:text-xl">BSc in Cybersecurity</span> at Howest University, Belgium, where I finished my first semester with a <span className="text-[var(--color-accent)] font-bold text-lg sm:text-xl">16.40/20 GPA</span> and 30/30 ECTS. My academic work is matched by real-world impact – I've built <span className="text-[var(--color-accent)] font-bold">practical security tools, platforms, and bug bounty research</span>
+                    I'm doing my <span className="text-[var(--color-text-heading)] font-bold text-lg sm:text-xl">BSc in Cybersecurity</span> at Howest University, Belgium, and I don't do retakes: <span className="text-[var(--color-accent)] font-bold text-lg sm:text-xl">60/60 ECTS</span> in the very first attempt, with 18/20 in Programming, Computer Architecture & OS, and Web Backend. Then I went and ranked <span className="text-[var(--color-accent)] font-bold">#1 in Web</span> (junior division) and <span className="text-[var(--color-accent)] font-bold">#26 out of 806</span> at Belgium's national CTF, CSCB 2026. <span className="text-[var(--color-text-heading)] font-semibold">nmap goes brrr.</span>
                   </p>
                 </motion.div>
                 
@@ -165,7 +164,7 @@ export default function About() {
                   transition={{ delay: 0.3 }}
                   className="text-base sm:text-lg"
                 >
-                  As the <span className="text-[var(--color-text-heading)] font-bold text-lg sm:text-xl">Founder of The PenTrix</span>, I'm building a cybersecurity learning initiative that gives beginners a clear, practical path into offensive security and AI in cybersecurity — without the noise.
+                  As the <span className="text-[var(--color-text-heading)] font-bold text-lg sm:text-xl">Founder of The PenTrix</span>, I'm building the maps I never had: tutorials, tools, write-ups, and roadmaps for the next generation of security researchers. I started on the attacker side, and now the <span className="text-[var(--color-accent)] font-bold">defence arc is loading</span>: forensics, reverse engineering, malware analysis. The best defenders think like attackers first.
                 </motion.p>
                 
                 <motion.div
@@ -176,7 +175,7 @@ export default function About() {
                   className="bg-gradient-to-br from-[var(--color-accent)]/10 via-[var(--color-accent-secondary)]/10 to-transparent p-4 sm:p-6 rounded-xl border border-[var(--color-accent)]/20"
                 >
                   <p className="text-base sm:text-lg">
-                    With <span className="text-[var(--color-accent)] font-bold text-lg sm:text-xl">50+ industry certifications</span> and a proven track record of delivering projects and completing tasks at <span className="text-[var(--color-text-heading)] font-bold">high‑impact</span>, I bring a unique combination of technical expertise, innovation, and dedication to every challenge I undertake.
+                    With <span className="text-[var(--color-accent)] font-bold text-lg sm:text-xl">53+ certifications</span> (eJPTv2 and eWPT in progress), real bug bounty payouts, and production security engineering experience, I live by one loop: <span className="text-[var(--color-text-heading)] font-bold">Understand it. Break it. Build it. Secure it. Improve it.</span>
                   </p>
                 </motion.div>
               </div>

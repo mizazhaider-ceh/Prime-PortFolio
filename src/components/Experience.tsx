@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaShieldAlt, FaBriefcase, FaUserSecret, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import { FaShieldAlt, FaBug, FaServer, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 import { IconType } from 'react-icons';
 
 interface ExperienceItem {
@@ -17,43 +17,55 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    icon: FaShieldAlt,
+    icon: FaBug,
+    iconBg: 'bg-gradient-to-br from-red-500 to-pink-600',
+    title: 'Bug Bounty Hunter',
+    company: 'YesWeHack',
+    type: 'Part-time',
+    duration: 'Feb 2026 - Present · 8 mos',
+    location: 'Remote',
+    description: 'Responsible vulnerability research across bug bounty and vulnerability disclosure programs. Finding vulns in production systems and reporting them properly, usually at 3AM. YesWeHack officially recognized the work, which means at least someone appreciates my late-night discoveries.',
+    highlights: [
+      'Earned official YesWeHack recognition + swag for consistent performance',
+      'Reported an Unrestricted File Upload (CWE-434): accepted, +12 reputation',
+      'Focus areas: Web Application Security, API Security, Authentication & Authorization, AI-assisted security research',
+      'Chaining low-severity findings into higher-impact exploit paths',
+    ],
+    skills: ['Web Security', 'API Security', 'Burp Suite', 'Recon'],
+  },
+  {
+    icon: FaServer,
     iconBg: 'bg-gradient-to-br from-orange-500 to-red-600',
-    title: 'Security Engineer (Contract)',
-    company: 'Sustainability Platform · Freelance',
-    type: 'Contract',
+    title: 'Junior Security Engineer',
+    company: 'Damno Solutions',
+    type: 'Part-time',
     duration: 'Nov 2025 - Jun 2026 · 8 mos',
     location: 'Belgium · Remote',
-    description: 'Application security and DevSecOps work on a live climate/sustainability platform — hardening pipelines, securing APIs, and building AI-assisted security tooling. 🌍🔐',
+    description: 'Contributed to securing the CBAM platform and cloud infrastructure as a junior security engineer. Learned a lot, shipped real things, grew even more.',
     highlights: [
-      'Supported hardening of CI/CD pipelines and containerized workloads',
-      'Assisted in building LLM-assisted vulnerability scanners and SAST tools',
-      'Conducted security-focused code reviews and penetration testing of APIs',
-      'Helped deliver production-ready pipelines and documented security fixes',
-      'Contributed to API optimization and secure access design',
+      'Built and maintained GitLab CI/CD security pipelines',
+      'Fixed critical SQLi vulnerabilities in production (269/269 tests passing)',
+      'Security-focused code reviews across the CBAM codebase',
+      'Worked on LLM-assisted security tooling and AI-driven scanning',
     ],
+    skills: ['DevSecOps', 'CI/CD Security', 'SAST', 'Python'],
   },
   {
-    icon: FaUserSecret,
-    iconBg: 'bg-gradient-to-br from-purple-500 to-pink-600',
-    title: 'Offensive Security Intern',
-    company: 'Rhombix Technologies',
-    type: 'Internship',
-    duration: 'Mar 2025 - May 2025 · 3 mos',
+    icon: FaShieldAlt,
+    iconBg: 'bg-gradient-to-br from-emerald-500 to-teal-600',
+    title: 'Founder & Offensive Security Researcher',
+    company: 'The PenTrix',
+    type: 'Self-employed',
+    duration: 'Jan 2022 - Present · 4+ yrs',
     location: 'Remote',
-    description: 'Cybersecurity enthusiast bolstering network defense skills by developing a basic sniffer and reinforcing user awareness through comprehensive phishing training initiatives.',
-    skills: ['Python', 'Social Engineering', 'Network Security'],
-  },
-  {
-    icon: FaBriefcase,
-    iconBg: 'bg-gradient-to-br from-cyan-500 to-blue-600',
-    title: 'Cyber Security Intern',
-    company: 'Prodigy InfoTech',
-    type: 'Internship',
-    duration: 'Jan 2025 - Apr 2025 · 4 mos',
-    location: 'Remote',
-    description: 'Applied cybersecurity intern leveraging ethical hacking and penetration testing skills along with programming and AI utilization to develop security solutions and tools.',
-    skills: ['Python', 'Networking', 'Penetration Testing'],
+    description: 'Started with one question: "How do systems break?" Still asking it, but now with much better answers. Building the maps I never had for the next generation of security researchers.',
+    highlights: [
+      'Hands-on penetration testing across web, system, and network: go deep in one area, master it, move to the next',
+      'Offensive security research: finding what automated scanners casually walk past',
+      'AI x Security experimentation: building tools, testing LLMs, breaking things intelligently',
+      'Tutorials, CTF write-ups, custom tools, beginner roadmaps, real lab reports',
+    ],
+    skills: ['Penetration Testing', 'AI Security', 'Python', 'Teaching'],
   },
 ];
 

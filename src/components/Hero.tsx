@@ -82,8 +82,9 @@ export default function Hero() {
                   words={[
                     'Penetration Tester',
                     'AI × Security Researcher',
-                    'Founder @ The PenTrix',
                     'Bug Bounty Hunter',
+                    'Founder @ The PenTrix',
+                    'Defensive Security Explorer',
                   ]}
                   loop={0}
                   cursor
@@ -103,9 +104,10 @@ export default function Hero() {
               transition={{ delay: 0.8 }}
               className="text-base sm:text-lg lg:text-xl text-[var(--color-text-secondary)] max-w-xl mx-auto lg:mx-0 leading-relaxed"
             >
-              19-year-old offensive security researcher breaking systems to make them stronger. Building
-              <span className="text-[var(--color-text-heading)] font-medium"> AI-powered security tools </span>
-              and sharing knowledge through The PenTrix.
+              19-year-old security researcher breaking systems to make them stronger. Bug bounty hunter
+              <span className="text-[var(--color-text-heading)] font-medium"> @ YesWeHack</span>, building
+              <span className="text-[var(--color-text-heading)] font-medium"> AI-powered security tools</span>,
+              and now going deep on the defensive side too.
             </motion.p>
 
             {/* CTA Buttons */}

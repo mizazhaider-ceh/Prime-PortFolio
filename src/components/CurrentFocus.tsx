@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaShieldAlt, FaGraduationCap, FaRocket } from 'react-icons/fa';
+import { FaBug, FaGraduationCap, FaRocket } from 'react-icons/fa';
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -58,16 +58,16 @@ const highlightKeywords = (text: string) => {
 
 const roles = [
   {
-    icon: <FaShieldAlt className="text-white text-lg" />,
-    iconBg: 'bg-gradient-to-br from-orange-500 to-red-600',
-    title: 'Security Research & Freelance Projects',
-    org: 'Independent / Contract Engagement',
-    meta: '2025 – 2026 | Belgium (Remote)',
-    intro: 'Below are some of my key responsibilities and achievements:',
+    icon: <FaBug className="text-white text-lg" />,
+    iconBg: 'bg-gradient-to-br from-red-500 to-pink-600',
+    title: 'Bug Bounty Hunter',
+    org: 'YesWeHack',
+    meta: 'Feb 2026 – Present | Remote',
+    intro: 'Responsible disclosure, real targets, 3AM discoveries:',
     bullets: [
-      'Conducted application security work on a live sustainability platform (CI/CD hardening, API security, LLM-based vulnerability scanning)',
-      'Delivered penetration testing and bug bounty assessments',
-      'Built and maintained secure DevSecOps pipelines (GitLab CI, Docker)',
+      'Official YesWeHack recognition + swag for consistent hunting performance',
+      'Unrestricted File Upload (CWE-434) found via leaked JS token: accepted, +12 reputation',
+      'Web, API, and auth testing with AI-assisted recon workflows',
     ],
   },
   {
@@ -76,21 +76,19 @@ const roles = [
     title: "Bachelor's in Cybersecurity",
     org: 'HOWEST University',
     meta: 'Sep 2025 – Present | Belgium',
-    intro: 'FIRST SEMESTER RESULTS (Jan 2026):',
+    intro: 'FIRST ATTEMPT. NO RETAKES.',
     bullets: [
-      'CGPA: 16.40/20 (≈3.47/4.0)',
-      '30/30 ECTS credits earned',
-      'All courses passed first attempt',
+      'Year 1: 60/60 ECTS, threshold passed',
+      '18/20 in Programming, Computer Architecture & OS, Web Backend',
+      '17/20 in Web Pentesting, CTF, Linux for Ethical Hackers, Networks',
     ],
     extra: {
-      heading: 'COURSES:',
+      heading: 'YEAR 2 FOCUS (DEFENCE ARC):',
       items: [
-        'Cybersecurity Essentials',
-        'Computer Architecture and Operating Systems (Linux/Windows)',
-        'Programming (JavaScript)',
-        'Web Frontend (HTML/CSS/Vanilla JS)',
-        'Databases ( SQL + JSON )',
-        '100+ Labs, Projects & Practical Work',
+        'Digital Forensics Analysis',
+        'Practical Reverse Engineering & Malware Analysis',
+        'Linux & Windows Server Security',
+        'Web Pentesting Advanced, Mobile Security, Cybercrime and Warfare',
       ],
     },
   },
@@ -111,7 +109,7 @@ const roles = [
         heading: "WHAT I'M BUILDING:",
         bullets: [
           'Designing The PenTrix as a full platform with roadmaps, labs, and AI-assisted mentors for beginners and intermediate learners.',
-          'Publishing practical content on offensive security, DevSecOps, and AI in cybersecurity so others can follow a clear path instead of getting lost in random resources.',
+          'Publishing practical content on offensive security, defensive security, and AI in cybersecurity so others can follow a clear path instead of getting lost in random resources.',
         ],
       },
       {
@@ -159,7 +157,7 @@ export default function CurrentFocus() {
             CURRENT FOCUS
           </h2>
           <p className="text-base sm:text-lg text-[var(--color-text-secondary)] max-w-3xl mx-auto leading-relaxed">
-            Building security solutions, pursuing excellence in academics, and leading community initiatives
+            Hunting bugs, going deep on the defensive side, and leading community initiatives
           </p>
         </motion.div>
 

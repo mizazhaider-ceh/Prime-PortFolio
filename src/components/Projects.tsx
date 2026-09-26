@@ -1,12 +1,29 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaGithub, FaStar, FaExternalLinkAlt, FaTerminal, FaWindows, FaRobot, FaShieldAlt, FaGraduationCap, FaSearchengin, FaNetworkWired, FaGlobe, FaBrain, FaKey, FaMap, FaBook, FaLock } from 'react-icons/fa';
+import { FaGithub, FaStar, FaExternalLinkAlt, FaTerminal, FaWindows, FaRobot, FaShieldAlt, FaGraduationCap, FaSearchengin, FaNetworkWired, FaGlobe, FaBrain, FaKey, FaMap, FaBook, FaLock, FaBug } from 'react-icons/fa';
 import { SiLinux } from 'react-icons/si';
 
 const categories = ['All', 'AI Security', 'Offensive Security', 'DevSecOps', 'Education', 'Strategy & Tools'];
 
 const projects = [
   // 🥇 TIER 1 — Must-Have Flagship Projects
+  {
+    title: "BugHunt Arsenal",
+    titleColor: "text-red-400",
+    icon: FaBug,
+    iconBg: "from-red-500 to-rose-600",
+    category: "Offensive Security",
+    categoryTag: "🚀 NEW • Flagship • 800+ Payloads • Live",
+    description: "Free browser-based web pentesting and security research platform. 800+ curated payloads across 21 categories, CTF Command Center with 60+ tools, Chain Builder for multi-step exploit chains, client-side Metadata Analyzer, Encoder/Decoder, HTTP Request Builder, and full OWASP Top 10 methodology. 14+ modules, one tab, zero cost. No install, no sign-up, no paywalls, ever.",
+    tech: [
+      { name: "JavaScript", color: "text-yellow-400" },
+      { name: "HTML5", color: "text-orange-400" },
+      { name: "CSS3", color: "text-blue-400" },
+      { name: "Security Tools", color: "text-red-400" }
+    ],
+    external: "https://bughunt-arsenal.vercel.app",
+    featured: true
+  },
   {
     title: "Prime-PenTrix",
     titleColor: "text-purple-400",
@@ -38,7 +55,7 @@ const projects = [
       { name: "Gemini AI", color: "text-green-400" },
       { name: "Linux", color: "text-yellow-400" }
     ],
-    stars: 32,
+    stars: 38,
     github: "https://github.com/mizazhaider-ceh/Ai-Terminal-X",
     featured: true
   },
@@ -94,18 +111,18 @@ const projects = [
     featured: true
   },
   {
-    title: "X-Recon",
+    title: "X-Recon v3.0",
     titleColor: "text-red-400",
     icon: FaNetworkWired,
     iconBg: "from-red-500 to-orange-500",
     category: "Offensive Security",
-    categoryTag: "🏆 TIER 1 • CLI + AI + Web Dashboard",
-    description: "Multi-interface recon platform: CLI + AI + Web Dashboard. FastAPI backend with cyberpunk UI. Modular architecture showcases full-stack + API design skills. Portfolio eye-candy with substance.",
+    categoryTag: "🏆 TIER 1 • AI Recon • Llama 3.3 70B • Web Dashboard",
+    description: "Elite AI-powered cybersecurity reconnaissance suite bridging raw CLI power and modern AI-driven analysis. High-concurrency Python/FastAPI engine (1000+ ports/sec), Llama 3.3 70B via Cerebras for context-aware vulnerability analysis and CVE lookups, WebSocket live terminal streaming, and a cyberpunk-themed SPA dashboard with automated HTML reporting.",
     tech: [
       { name: "Python", color: "text-blue-400" },
       { name: "FastAPI", color: "text-green-400" },
-      { name: "AI", color: "text-purple-400" },
-      { name: "Dashboard", color: "text-cyan-400" }
+      { name: "Llama 3.3 70B", color: "text-purple-400" },
+      { name: "WebSockets", color: "text-cyan-400" }
     ],
     github: "https://github.com/mizazhaider-ceh/X-Recon",
     featured: true
@@ -398,7 +415,7 @@ export default function Projects() {
             Featured Projects
           </h2>
           <p className="text-[var(--color-text-secondary)] mb-8">
-            {activeFilter === 'All' ? 'I did many projects, but here are the top 9. You can see all on GitHub!' : `${filteredProjects.length} Projects across ${activeFilter}`}
+            {activeFilter === 'All' ? `I did many projects, but here are the top ${projects.filter(p => p.featured).length}. You can see all on GitHub!` : `${filteredProjects.length} Projects across ${activeFilter}`}
           </p>
 
           {/* Filter Buttons with Counts */}

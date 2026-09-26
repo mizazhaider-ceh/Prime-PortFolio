@@ -4,6 +4,24 @@ import { SiGoogle } from 'react-icons/si';
 
 const certifications = [
   { 
+    name: "Junior Penetration Tester v2 (eJPTv2)", 
+    abbr: "eJPTv2",
+    org: "INE Security", 
+    id: "In Progress", 
+    badge: "Studying",
+    icon: FaShieldAlt,
+    color: "from-red-400 to-orange-500"
+  },
+  { 
+    name: "Web Application Penetration Tester (eWPT)", 
+    abbr: "eWPT",
+    org: "INE Security", 
+    id: "In Progress", 
+    badge: "Studying",
+    icon: FaShieldAlt,
+    color: "from-orange-400 to-red-500"
+  },
+  { 
     name: "Certified Network Security Practitioner", 
     abbr: "CNSP",
     org: "The SecOps Group", 
@@ -51,6 +69,14 @@ const certifications = [
     id: "RS93ZODN6CMN",
     icon: FaShieldAlt,
     color: "from-indigo-400 to-blue-500"
+  },
+  { 
+    name: "Web Application Security Testing with Google Hacking", 
+    abbr: "Google Hacking",
+    org: "CodeRed", 
+    id: "461818",
+    icon: FaCertificate,
+    color: "from-cyan-400 to-blue-500"
   },
   { 
     name: "Advanced Python Scripting", 
@@ -104,7 +130,7 @@ export default function Certifications() {
           transition={{ delay: 0.1 }}
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--color-text-heading)] font-cyber mb-4 md:mb-6"
         >
-          50+ Certifications.{' '}
+          53 Certifications.{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-secondary)]">
             Zero Excuses.
           </span>
@@ -248,7 +274,7 @@ export default function Certifications() {
           >
             <FaMedal className="text-xl" />
           </motion.div>
-          View All 50+ Certifications
+          View All 53 Certifications
           <motion.span
             animate={{ x: [0, 5, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
