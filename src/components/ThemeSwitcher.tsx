@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaSun, FaMoon } from 'react-icons/fa';
+import { FaSun, FaMoon, FaTerminal, FaBolt, FaGhost } from 'react-icons/fa';
 
-type Theme = 'prime-dark' | 'light';
+type Theme = 'prime-dark' | 'light' | 'matrix' | 'cyberpunk' | 'dracula';
 
 interface ThemeOption {
   id: Theme;
@@ -23,6 +23,24 @@ const themes: ThemeOption[] = [
     name: 'Ivory Light', 
     icon: FaSun,
     description: 'Premium elegance'
+  },
+  { 
+    id: 'matrix', 
+    name: 'Matrix', 
+    icon: FaTerminal,
+    description: 'Phosphor-green terminal'
+  },
+  { 
+    id: 'cyberpunk', 
+    name: 'Neon Cyberpunk', 
+    icon: FaBolt,
+    description: 'Night City neon glow'
+  },
+  { 
+    id: 'dracula', 
+    name: 'Dracula', 
+    icon: FaGhost,
+    description: 'The classic dev palette'
   },
 ];
 

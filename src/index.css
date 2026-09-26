@@ -35,6 +35,9 @@
 /* 2. Themes - Dark and Light theme variables */
 @import './styles/themes/dark.css';
 @import './styles/themes/light.css';
+@import './styles/themes/matrix.css';
+@import './styles/themes/cyberpunk.css';
+@import './styles/themes/dracula.css';
 
 /* 3. Glass Effects - Glass morphism system */
 @import './styles/glass.css';

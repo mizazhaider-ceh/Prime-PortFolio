@@ -1,0 +1,74 @@
+/* ══════════════════════════════════════════════════════════════════════════════
+   NEON CYBERPUNK THEME - Night City
+   Deep violet nights lit by hot-pink neon and electric cyan
+══════════════════════════════════════════════════════════════════════════════ */
+
+[data-theme="cyberpunk"] {
+  color-scheme: dark;
+
+  /* ── Background & Gradients - Night City ── */
+  --color-bg-primary: #0d0221;
+  --color-bg-secondary: rgba(19, 4, 48, 0.93);
+  --color-bg-tertiary: rgba(28, 8, 64, 0.96);
+  --color-bg-gradient: radial-gradient(
+    ellipse at 30% 20%,
+    #1a0b3d 0%,
+    #0d0221 45%,
+    #090114 100%
+  );
+
+  /* ── Text Colors - Hologram ── */
+  --color-text-primary: #f3e8ff;
+  --color-text-secondary: #a78bfa;
+  --color-text-heading: #ffffff;
+  --color-text-muted: #6d5aa8;
+
+  /* ── Accent Colors - Neon Pink & Electric Cyan ── */
+  --color-accent: #ff2a6d;
+  --color-accent-secondary: #05d9e8;
+  --color-accent-hover: #e01e5c;
+  --color-accent-dim: rgba(255, 42, 109, 0.1);
+  --color-accent-bright: #ff5c8a;
+
+  /* ── Borders - Neon Tube ── */
+  --color-border: rgba(255, 42, 109, 0.28);
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
+  --color-border-bright: rgba(5, 217, 232, 0.45);
+
+  /* ── Glass Effects - Rain-Slicked Neon ── */
+  --glass-bg: rgba(19, 4, 48, 0.8);
+  --glass-bg-dark: rgba(13, 2, 33, 0.65);
+  --glass-border: 1px solid rgba(255, 42, 109, 0.2);
+  --glass-blur: blur(16px);
+
+  /* ── Glow Effects - Neon Sign ── */
+  --shadow-glow:
+    0 0 15px rgba(255, 42, 109, 0.25),
+    0 0 40px rgba(5, 217, 232, 0.1),
+    0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-glow-strong:
+    0 0 25px rgba(255, 42, 109, 0.45),
+    0 0 60px rgba(5, 217, 232, 0.18),
+    0 12px 48px rgba(0, 0, 0, 0.65);
+  --shadow-card:
+    0 4px 24px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 42, 109, 0.07);
+
+  /* ── Scrollbar - Neon ── */
+  --scrollbar-track: #090114;
+  --scrollbar-thumb: rgba(255, 42, 109, 0.35);
+  --scrollbar-thumb-hover: #ff2a6d;
+}
+
+/* Cyberpunk Enhancement - Headings with neon glow */
+[data-theme="cyberpunk"] h1, [data-theme="cyberpunk"] h2, [data-theme="cyberpunk"] h3 {
+  text-shadow: 0 0 12px rgba(255, 42, 109, 0.5), 0 0 32px rgba(5, 217, 232, 0.2);
+}
+
+/* Cyberpunk - Card hover effects */
+[data-theme="cyberpunk"] .glass-card:hover {
+  box-shadow:
+    0 0 24px rgba(255, 42, 109, 0.22),
+    0 0 48px rgba(5, 217, 232, 0.08),
+    0 8px 32px rgba(0, 0, 0, 0.6);
+}

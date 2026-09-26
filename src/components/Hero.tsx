@@ -193,28 +193,26 @@ export default function Hero() {
               
               {/* Video Player */}
               <div className="relative w-[240px] h-[240px] sm:w-[300px] sm:h-[300px] md:w-[350px] md:h-[350px] lg:w-[420px] lg:h-[420px] rounded-3xl overflow-hidden border-4 border-[var(--color-accent)]/20 shadow-2xl shadow-[var(--color-accent)]/20 bg-[var(--color-bg-secondary)]">
-                <video 
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
+                <motion.img
+                  src="/images/hacker.png"
+                  alt="Hacker illustration - Muhammad Izaz Haider"
                   className="w-full h-full object-cover"
                   style={{
                     imageRendering: '-webkit-optimize-contrast',
                   }}
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                  loading="eager"
+                  decoding="async"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                     const fallback = e.currentTarget.nextElementSibling as HTMLElement;
                     if (fallback) fallback.classList.remove('hidden');
                   }}
-                >
-                  <source src="/images/robot.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                />
                 {/* Fallback */}
                 <div className="hidden w-full h-full bg-gradient-to-br from-[var(--color-accent)]/30 to-[var(--color-accent-secondary)]/30 flex items-center justify-center">
-                  <span className="text-6xl sm:text-7xl lg:text-8xl font-bold text-[var(--color-accent)]">🤖</span>
+                  <span className="text-6xl sm:text-7xl lg:text-8xl font-bold text-[var(--color-accent)]">💀</span>
                 </div>
               </div>
             </div>

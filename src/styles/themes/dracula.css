@@ -1,0 +1,73 @@
+/* ══════════════════════════════════════════════════════════════════════════════
+   DRACULA THEME - The Classic Dev Palette
+   Official Dracula colors: dark purple-gray with pink, purple and mint
+══════════════════════════════════════════════════════════════════════════════ */
+
+[data-theme="dracula"] {
+  color-scheme: dark;
+
+  /* ── Background & Gradients - Castle Walls ── */
+  --color-bg-primary: #282a36;
+  --color-bg-secondary: rgba(40, 42, 54, 0.94);
+  --color-bg-tertiary: rgba(68, 71, 90, 0.9);
+  --color-bg-gradient: radial-gradient(
+    ellipse at 30% 20%,
+    #343746 0%,
+    #282a36 50%,
+    #1e1f29 100%
+  );
+
+  /* ── Text Colors - Dracula Foreground ── */
+  --color-text-primary: #f8f8f2;
+  --color-text-secondary: #b6b8c9;
+  --color-text-heading: #ffffff;
+  --color-text-muted: #6272a4;
+
+  /* ── Accent Colors - Dracula Purple & Pink ── */
+  --color-accent: #bd93f9;
+  --color-accent-secondary: #ff79c6;
+  --color-accent-hover: #a679f0;
+  --color-accent-dim: rgba(189, 147, 249, 0.12);
+  --color-accent-bright: #d6acff;
+
+  /* ── Borders - Subtle Violet ── */
+  --color-border: rgba(189, 147, 249, 0.25);
+  --color-border-subtle: rgba(248, 248, 242, 0.06);
+  --color-border-bright: rgba(189, 147, 249, 0.5);
+
+  /* ── Glass Effects - Midnight Glass ── */
+  --glass-bg: rgba(40, 42, 54, 0.82);
+  --glass-bg-dark: rgba(30, 31, 41, 0.7);
+  --glass-border: 1px solid rgba(189, 147, 249, 0.18);
+  --glass-blur: blur(16px);
+
+  /* ── Glow Effects - Vampire Aura ── */
+  --shadow-glow:
+    0 0 15px rgba(189, 147, 249, 0.22),
+    0 0 40px rgba(255, 121, 198, 0.08),
+    0 8px 32px rgba(0, 0, 0, 0.45);
+  --shadow-glow-strong:
+    0 0 25px rgba(189, 147, 249, 0.4),
+    0 0 60px rgba(255, 121, 198, 0.14),
+    0 12px 48px rgba(0, 0, 0, 0.6);
+  --shadow-card:
+    0 4px 24px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(189, 147, 249, 0.06);
+
+  /* ── Scrollbar - Dracula ── */
+  --scrollbar-track: #1e1f29;
+  --scrollbar-thumb: rgba(189, 147, 249, 0.35);
+  --scrollbar-thumb-hover: #bd93f9;
+}
+
+/* Dracula Enhancement - Headings with violet glow */
+[data-theme="dracula"] h1, [data-theme="dracula"] h2, [data-theme="dracula"] h3 {
+  text-shadow: 0 0 24px rgba(189, 147, 249, 0.3);
+}
+
+/* Dracula - Card hover effects */
+[data-theme="dracula"] .glass-card:hover {
+  box-shadow:
+    0 0 20px rgba(189, 147, 249, 0.2),
+    0 8px 32px rgba(0, 0, 0, 0.55);
+}

@@ -1,0 +1,73 @@
+/* ══════════════════════════════════════════════════════════════════════════════
+   MATRIX THEME - Wake Up, Neo
+   Pure black with phosphor-green terminal glow
+══════════════════════════════════════════════════════════════════════════════ */
+
+[data-theme="matrix"] {
+  color-scheme: dark;
+
+  /* ── Background & Gradients - The Construct ── */
+  --color-bg-primary: #000000;
+  --color-bg-secondary: rgba(0, 12, 0, 0.94);
+  --color-bg-tertiary: rgba(0, 20, 0, 0.96);
+  --color-bg-gradient: radial-gradient(
+    ellipse at 50% 30%,
+    #001a00 0%,
+    #000000 55%,
+    #000500 100%
+  );
+
+  /* ── Text Colors - Phosphor Terminal ── */
+  --color-text-primary: #d0ffd0;
+  --color-text-secondary: #4d8a4d;
+  --color-text-heading: #eaffea;
+  --color-text-muted: #2d5a2d;
+
+  /* ── Accent Colors - Matrix Green ── */
+  --color-accent: #00ff41;
+  --color-accent-secondary: #39ff6a;
+  --color-accent-hover: #00cc33;
+  --color-accent-dim: rgba(0, 255, 65, 0.08);
+  --color-accent-bright: #7dff9b;
+
+  /* ── Borders - CRT Glow ── */
+  --color-border: rgba(0, 255, 65, 0.25);
+  --color-border-subtle: rgba(0, 255, 65, 0.06);
+  --color-border-bright: rgba(0, 255, 65, 0.5);
+
+  /* ── Glass Effects - Dark Terminal Glass ── */
+  --glass-bg: rgba(0, 12, 0, 0.82);
+  --glass-bg-dark: rgba(0, 0, 0, 0.7);
+  --glass-border: 1px solid rgba(0, 255, 65, 0.18);
+  --glass-blur: blur(16px);
+
+  /* ── Glow Effects - Phosphor Burn ── */
+  --shadow-glow:
+    0 0 15px rgba(0, 255, 65, 0.22),
+    0 0 40px rgba(0, 255, 65, 0.08),
+    0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-glow-strong:
+    0 0 25px rgba(0, 255, 65, 0.45),
+    0 0 60px rgba(0, 255, 65, 0.16),
+    0 12px 48px rgba(0, 0, 0, 0.7);
+  --shadow-card:
+    0 4px 24px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(0, 255, 65, 0.06);
+
+  /* ── Scrollbar - Terminal ── */
+  --scrollbar-track: #000500;
+  --scrollbar-thumb: rgba(0, 255, 65, 0.3);
+  --scrollbar-thumb-hover: #00ff41;
+}
+
+/* Matrix Enhancement - Headings with phosphor glow */
+[data-theme="matrix"] h1, [data-theme="matrix"] h2, [data-theme="matrix"] h3 {
+  text-shadow: 0 0 12px rgba(0, 255, 65, 0.45), 0 0 30px rgba(0, 255, 65, 0.15);
+}
+
+/* Matrix - Card hover effects */
+[data-theme="matrix"] .glass-card:hover {
+  box-shadow:
+    0 0 20px rgba(0, 255, 65, 0.18),
+    0 8px 32px rgba(0, 0, 0, 0.6);
+}
