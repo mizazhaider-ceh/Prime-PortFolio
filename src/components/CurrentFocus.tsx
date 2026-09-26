@@ -86,28 +86,16 @@ const roles = [
       '18/20 in Programming, Computer Architecture & OS, Web Backend',
       '17/20 in Web Pentesting, CTF, Linux for Ethical Hackers, Networks',
     ],
-    extras: [
-      {
-        heading: 'YEAR 2, SEM 3 (DEFENCE ARC):',
-        items: [
-          'Digital Forensics Analysis (6 SP)',
-          'Practical Reverse Engineering & Malware Analysis (3 SP)',
-          'Linux & Windows Server Security (6 + 6 SP)',
-          'Web Pentesting Advanced (3 SP), Mobile Security (3 SP), Cybercrime and Warfare (3 SP)',
-        ],
-      },
-      {
-        heading: 'YEAR 2, SEM 4 (NEXT):',
-        items: [
-          'Web Security and Honeypot (6 SP)',
-          'Network and System Pentesting (6 SP)',
-          'Datacenter Virtualisation and Cloud Security (6 SP)',
-          'Cyberops (6 SP)',
-          'Risk Management, Threat Modelling and Security Policy (3 SP)',
-          'International Project (3 SP)',
-        ],
-      },
-    ],
+    extra: {
+      heading: 'YEAR 2 (DEFENCE ARC):',
+      items: [
+        'Practical Reverse Engineering & Malware Analysis (3 SP)',
+        'Digital Forensics Analysis (6 SP)',
+        'Network and System Pentesting (6 SP)',
+        'Web Security and Honeypot (6 SP)',
+        'Linux & Windows Server Security (6 + 6 SP)',
+      ],
+    },
   },
   {
     icon: <FaRocket className="text-white text-lg" />,
@@ -220,19 +208,19 @@ export default function CurrentFocus() {
                 </>
               )}
 
-              {/* Extra sections (courses) */}
-              {role.extras?.map((ex, ei) => (
-                <div key={ei} className={ei > 0 ? 'mt-3' : ''}>
+              {/* Extra section (courses) */}
+              {role.extra && (
+                <>
                   <p className="text-xs sm:text-sm font-bold text-[var(--color-text-heading)] mb-2 uppercase tracking-wide">
-                    {ex.heading}
+                    {role.extra.heading}
                   </p>
                   <ul className="space-y-1.5 text-xs sm:text-sm text-[var(--color-text-secondary)] list-disc list-inside">
-                    {ex.items.map((item, idx) => (
+                    {role.extra.items.map((item, idx) => (
                       <li key={idx} className="leading-relaxed" dangerouslySetInnerHTML={{ __html: highlightKeywords(item) }} />
                     ))}
                   </ul>
-                </div>
-              ))}
+                </>
+              )}
 
               {/* Multi-section layout (PenTrix) */}
               {role.sections?.map((sec, si) => (
