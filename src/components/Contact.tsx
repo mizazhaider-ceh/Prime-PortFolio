@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaMedium, FaTwitter, FaEnvelope, FaMapMarkerAlt, FaPaperPlane, FaGlobeEurope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaMapMarkerAlt, FaPaperPlane, FaGlobeEurope } from 'react-icons/fa';
 // import emailjs from '@emailjs/browser';
 
 export default function Contact() {
@@ -171,20 +171,6 @@ export default function Contact() {
                     className="hover:text-[var(--color-accent)] transition-all"
                   >
                     <FaLinkedin />
-                  </motion.a>
-                  <motion.a
-                    href="#"
-                    whileHover={{ scale: 1.3, rotate: 15, y: -5 }}
-                    className="hover:text-[var(--color-accent)] transition-all"
-                  >
-                    <FaMedium />
-                  </motion.a>
-                  <motion.a
-                    href="#"
-                    whileHover={{ scale: 1.3, rotate: -360, y: -5 }}
-                    className="hover:text-[var(--color-accent)] transition-all"
-                  >
-                    <FaTwitter />
                   </motion.a>
                </div>
             </div>

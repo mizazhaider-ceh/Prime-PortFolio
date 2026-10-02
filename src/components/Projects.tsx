@@ -234,7 +234,7 @@ const projects = [
       { name: "JavaScript", color: "text-yellow-400" },
       { name: "PWA", color: "text-purple-400" }
     ],
-    external: "https://cybermap.vercel.app"
+    external: "https://cyber-map-six.vercel.app"
   },
   {
     title: "Archetypes",

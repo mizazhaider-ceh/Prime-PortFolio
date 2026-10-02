@@ -1,4 +1,4 @@
-import { FaArrowUp, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaArrowUp, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const links = [
@@ -36,6 +36,9 @@ export default function Footer() {
           <div className="flex gap-6 text-2xl text-[var(--color-text-secondary)]">
             <motion.a
               href="https://github.com/mizazhaider-ceh?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
               whileHover={{ scale: 1.2, rotate: 360, y: -5 }}
               transition={{ duration: 0.5 }}
               className="hover:text-[var(--color-accent)] transition-all"
@@ -44,19 +47,13 @@ export default function Footer() {
             </motion.a>
             <motion.a
               href="https://www.linkedin.com/in/muhammad-izaz-haider-091639314/"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.2, y: -5 }}
               transition={{ duration: 0.3 }}
               className="hover:text-[var(--color-accent)] transition-all"
             >
               <FaLinkedin />
-            </motion.a>
-            <motion.a
-              href="#"
-              whileHover={{ scale: 1.2, rotate: -360, y: -5 }}
-              transition={{ duration: 0.5 }}
-              className="hover:text-[var(--color-accent)] transition-all"
-            >
-              <FaTwitter />
             </motion.a>
           </div>
         </div>
